@@ -20,8 +20,10 @@ int main() {
   std::filesystem::create_directories("output/frames");
   std::filesystem::remove("output/demo.gif");
 
+  // 1) 构造参考轨迹。
   const auto ref = BuildArcTrajectory();
 
+  // 2) 纵向双环 PID 参数。
   PidConfig station_pid_conf;
   station_pid_conf.integrator_enable = false;
   station_pid_conf.integrator_saturation_level = 0.1;
@@ -48,6 +50,7 @@ int main() {
   const double wheelbase = 2.72;
   LqrController lqr;
 
+  // 3) 初始状态：放在起点法向外侧，带一点航向偏差。
   VehicleState st;
   const RefPoint& p0 = ref.front();
   const double n_x = -std::sin(p0.theta);
@@ -88,8 +91,9 @@ int main() {
 
   int frame_id = 0;
   for (int k = 0; k < max_steps; ++k) {
+    // 4) 匹配当前车辆到参考轨迹，提取横向/纵向控制目标。
     const FrenetMatch match = MatchToTrajectory(ref, st, hint_idx);
-    const RefPoint target_t = match.ref;
+    const RefPoint longitudinal_target = match.ref;
     hint_idx = match.idx;
     st.s = match.s;
 
@@ -98,11 +102,10 @@ int main() {
     const double end_dy = st.y - ref.back().y;
     const double end_dist = std::hypot(end_dx, end_dy);
 
-    const double station_error = target_t.s - st.s;
+    const double station_error = longitudinal_target.s - st.s;
 
-    double v_ref = target_t.v;
-
-    // Terminal speed envelope based on distance-to-go; avoids long low-speed creep.
+    // 5) 纵向参考速度限制：几何收敛约束 + 制动距离约束。
+    double v_ref = longitudinal_target.v;
     const double v_brake_limit = std::sqrt(std::max(0.0, 2.0 * 1.8 * remaining_s));
     const double v_geo_limit = 2.5 * end_dist;
     v_ref = std::min(v_ref, std::min(v_brake_limit, v_geo_limit));
@@ -111,11 +114,11 @@ int main() {
     }
 
     const double speed_error = v_ref - st.v;
-
     const double speed_offset = station_pid.Control(station_error, ts);
     const double speed_input = Clamp(speed_offset + speed_error, -3.0, 3.0);
-    double a_cmd = speed_pid.Control(speed_input, ts) + target_t.a;
+    double a_cmd = speed_pid.Control(speed_input, ts) + longitudinal_target.a;
 
+    // 超速时附加制动，避免终点附近低速拖尾。
     if (st.v > v_ref + 0.15) {
       a_cmd = std::min(a_cmd, -(st.v - v_ref));
     }
@@ -129,9 +132,11 @@ int main() {
 
     a_cmd = Clamp(a_cmd, -4.0, 2.5);
 
+    // 6) 横向 LQR 转角控制。
     LqrDebug lqr_debug;
     const double delta_cmd = lqr.ComputeSteering(st, match, &lqr_debug);
 
+    // 7) 车辆离散更新（后轴模型）。
     st.steer = delta_cmd;
     st.a = a_cmd;
     st.v = std::max(0.0, st.v + st.a * ts);
@@ -140,9 +145,9 @@ int main() {
     st.x += st.v * std::cos(st.theta) * ts;
     st.y += st.v * std::sin(st.theta) * ts;
 
+    // 8) 终点停车判据。
     const FrenetMatch stop_match = MatchToTrajectory(ref, st, hint_idx);
-    const double remaining_s_now =
-        std::max(0.0, ref.back().s - stop_match.s);
+    const double remaining_s_now = std::max(0.0, ref.back().s - stop_match.s);
 
     bool stop_now = false;
     if ((end_dist < 0.12 && st.v < 0.08) ||
@@ -161,8 +166,9 @@ int main() {
       filename << "output/frames/frame_" << std::setfill('0') << std::setw(4)
                << frame_id++ << ".png";
 
-      RenderFrame(plot_cfg, ref_x, ref_y, traj_x, traj_y, st, match, target_t,
-                  lqr_debug, v_ref, a_cmd, wheelbase, filename.str());
+      RenderFrame(plot_cfg, ref_x, ref_y, traj_x, traj_y, st, match,
+                  longitudinal_target, lqr_debug, v_ref, a_cmd, wheelbase,
+                  filename.str());
       if (!headless) {
         plt::pause(0.001);
       }

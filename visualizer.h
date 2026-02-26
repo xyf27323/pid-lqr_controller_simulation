@@ -17,8 +17,10 @@ struct PlotConfig {
   double text_y = 43.0;
 };
 
+// 绘制车辆矩形轮廓（以后轴中心为参考）。
 void PlotVehicleBox(const VehicleState& st, double wheelbase);
 
+// 渲染并保存单帧图像。
 void RenderFrame(const PlotConfig& cfg,
                  const std::vector<double>& ref_x,
                  const std::vector<double>& ref_y,
@@ -26,7 +28,7 @@ void RenderFrame(const PlotConfig& cfg,
                  const std::vector<double>& traj_y,
                  const VehicleState& st,
                  const FrenetMatch& match,
-                 const RefPoint& target_t,
+                 const RefPoint& longitudinal_target,
                  const LqrDebug& lqr_debug,
                  double v_ref,
                  double a_cmd,

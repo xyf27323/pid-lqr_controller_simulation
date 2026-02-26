@@ -16,17 +16,22 @@ class LqrController {
   struct Params {
     double ts = 0.01;
     double wheelbase = 2.72;
+
+    // 车辆横摆动力学参数。
     double cf = 155494.663;
     double cr = 155494.663;
     double mass_fl = 520.0;
     double mass_fr = 520.0;
     double mass_rl = 520.0;
     double mass_rr = 520.0;
+
+    // LQR 代价函数参数。
     double q11 = 0.01;
     double q22 = 0.0;
     double q33 = 0.05;
     double q44 = 0.0;
     double r = 0.05;
+
     double lqr_eps = 0.01;
     unsigned int lqr_max_iter = 200;
     double minimum_speed_protection = 1.0;

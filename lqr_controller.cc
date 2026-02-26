@@ -28,6 +28,7 @@ void SolveLQRProblem(const Eigen::MatrixXd& A,
   unsigned int num_iteration = 0;
   double diff = std::numeric_limits<double>::max();
 
+  // 通过离散代数 Riccati 方程迭代求解增益矩阵。
   while (num_iteration++ < max_num_iteration && diff > tolerance) {
     const Eigen::MatrixXd P_next =
         AT * P * A - (AT * P * B) * (R + BT * P * B).inverse() * (BT * P * A) +
@@ -95,6 +96,7 @@ double LqrController::ComputeSteering(const VehicleState& st,
                                       LqrDebug* debug) const {
   const double v_for_lqr = std::max(p_.minimum_speed_protection, st.v);
 
+  // 速度相关线性化：低速时用保护速度避免矩阵病态。
   Eigen::MatrixXd A = A_;
   A(1, 1) = A_coeff_(1, 1) / v_for_lqr;
   A(1, 3) = A_coeff_(1, 3) / v_for_lqr;
@@ -119,6 +121,8 @@ double LqrController::ComputeSteering(const VehicleState& st,
   x_state(3, 0) = e_psi_dot;
 
   const double delta_fb = -(K * x_state)(0, 0);
+
+  // 曲率前馈项，用于减小稳态横向误差。
   const double kv =
       lr_ * mass_ / (2.0 * p_.cf * p_.wheelbase) -
       lf_ * mass_ / (2.0 * p_.cr * p_.wheelbase);

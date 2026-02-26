@@ -6,11 +6,51 @@
 
 #IncludeRegexTransform: 
 
+/home/yihang/TS/planning_controlling_simulation-main/lqr_controller.cc
+lqr_controller.h
+/home/yihang/TS/planning_controlling_simulation-main/lqr_controller.h
+cmath
+-
+iostream
+-
+limits
+-
+Eigen/LU
+/home/yihang/TS/planning_controlling_simulation-main/Eigen/LU
+
 /home/yihang/TS/planning_controlling_simulation-main/lqr_controller.h
 Eigen/Core
 /home/yihang/TS/planning_controlling_simulation-main/Eigen/Core
 sim_types.h
 /home/yihang/TS/planning_controlling_simulation-main/sim_types.h
+
+/home/yihang/TS/planning_controlling_simulation-main/main.cpp
+algorithm
+-
+cmath
+-
+cstdlib
+-
+filesystem
+-
+iomanip
+-
+iostream
+-
+sstream
+-
+vector
+-
+lqr_controller.h
+/home/yihang/TS/planning_controlling_simulation-main/lqr_controller.h
+matplotlibcpp.h
+/home/yihang/TS/planning_controlling_simulation-main/matplotlibcpp.h
+pid_controller.h
+/home/yihang/TS/planning_controlling_simulation-main/pid_controller.h
+trajectory.h
+/home/yihang/TS/planning_controlling_simulation-main/trajectory.h
+visualizer.h
+/home/yihang/TS/planning_controlling_simulation-main/visualizer.h
 
 /home/yihang/TS/planning_controlling_simulation-main/matplotlibcpp.h
 Python.h
@@ -28,6 +68,14 @@ utility
 vector
 -
 
+/home/yihang/TS/planning_controlling_simulation-main/pid_controller.cc
+pid_controller.h
+/home/yihang/TS/planning_controlling_simulation-main/pid_controller.h
+cmath
+-
+
+/home/yihang/TS/planning_controlling_simulation-main/pid_controller.h
+
 /home/yihang/TS/planning_controlling_simulation-main/sim_types.h
 algorithm
 -
@@ -35,6 +83,20 @@ cmath
 -
 cstddef
 -
+
+/home/yihang/TS/planning_controlling_simulation-main/trajectory.cc
+trajectory.h
+/home/yihang/TS/planning_controlling_simulation-main/trajectory.h
+cmath
+-
+limits
+-
+
+/home/yihang/TS/planning_controlling_simulation-main/trajectory.h
+vector
+-
+sim_types.h
+/home/yihang/TS/planning_controlling_simulation-main/sim_types.h
 
 /home/yihang/TS/planning_controlling_simulation-main/visualizer.cc
 visualizer.h
@@ -408,6 +470,34 @@ src/Core/GlobalFunctions.h
 src/Core/util/ReenableStupidWarnings.h
 /usr/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h
 
+/usr/include/eigen3/Eigen/LU
+Core
+/usr/include/eigen3/Eigen/Core
+src/Core/util/DisableStupidWarnings.h
+/usr/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h
+src/misc/Kernel.h
+/usr/include/eigen3/Eigen/src/misc/Kernel.h
+src/misc/Image.h
+/usr/include/eigen3/Eigen/src/misc/Image.h
+src/LU/FullPivLU.h
+/usr/include/eigen3/Eigen/src/LU/FullPivLU.h
+src/LU/PartialPivLU.h
+/usr/include/eigen3/Eigen/src/LU/PartialPivLU.h
+mkl_lapacke.h
+/usr/include/eigen3/Eigen/mkl_lapacke.h
+src/misc/lapacke.h
+/usr/include/eigen3/Eigen/src/misc/lapacke.h
+src/LU/PartialPivLU_LAPACKE.h
+/usr/include/eigen3/Eigen/src/LU/PartialPivLU_LAPACKE.h
+src/LU/Determinant.h
+/usr/include/eigen3/Eigen/src/LU/Determinant.h
+src/LU/InverseImpl.h
+/usr/include/eigen3/Eigen/src/LU/InverseImpl.h
+src/LU/arch/Inverse_SSE.h
+/usr/include/eigen3/Eigen/src/LU/arch/Inverse_SSE.h
+src/Core/util/ReenableStupidWarnings.h
+/usr/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h
+
 /usr/include/eigen3/Eigen/src/Core/Array.h
 
 /usr/include/eigen3/Eigen/src/Core/ArrayBase.h
@@ -708,7 +798,37 @@ cstdint
 
 /usr/include/eigen3/Eigen/src/Core/util/XprHelper.h
 
+/usr/include/eigen3/Eigen/src/LU/Determinant.h
+
+/usr/include/eigen3/Eigen/src/LU/FullPivLU.h
+
+/usr/include/eigen3/Eigen/src/LU/InverseImpl.h
+
+/usr/include/eigen3/Eigen/src/LU/PartialPivLU.h
+
+/usr/include/eigen3/Eigen/src/LU/PartialPivLU_LAPACKE.h
+
+/usr/include/eigen3/Eigen/src/LU/arch/Inverse_SSE.h
+
+/usr/include/eigen3/Eigen/src/misc/Image.h
+
+/usr/include/eigen3/Eigen/src/misc/Kernel.h
+
 /usr/include/eigen3/Eigen/src/misc/blas.h
+
+/usr/include/eigen3/Eigen/src/misc/lapacke.h
+lapacke_config.h
+/usr/include/eigen3/Eigen/src/misc/lapacke_config.h
+stdlib.h
+-
+complex.h
+-
+complex.h
+-
+lapacke_mangling.h
+/usr/include/eigen3/Eigen/src/misc/lapacke_mangling.h
+
+/usr/include/eigen3/Eigen/src/misc/lapacke_mangling.h
 
 /usr/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h
 

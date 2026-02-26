@@ -13,7 +13,12 @@ void PlotVehicleBox(const VehicleState& st, double wheelbase) {
   const double half_w = 0.95;
 
   const std::vector<std::pair<double, double>> local = {
-      {front, half_w}, {front, -half_w}, {-rear, -half_w}, {-rear, half_w}, {front, half_w}};
+      {front, half_w},
+      {front, -half_w},
+      {-rear, -half_w},
+      {-rear, half_w},
+      {front, half_w},
+  };
 
   std::vector<double> bx;
   std::vector<double> by;
@@ -37,7 +42,7 @@ void RenderFrame(const PlotConfig& cfg,
                  const std::vector<double>& traj_y,
                  const VehicleState& st,
                  const FrenetMatch& match,
-                 const RefPoint& target_t,
+                 const RefPoint& longitudinal_target,
                  const LqrDebug& lqr_debug,
                  double v_ref,
                  double a_cmd,
@@ -58,7 +63,7 @@ void RenderFrame(const PlotConfig& cfg,
 
   plt::scatter(std::vector<double>{match.ref.x}, std::vector<double>{match.ref.y},
                60.0, {{"color", "orange"}, {"label", "Lateral target"}});
-  plt::scatter(std::vector<double>{target_t.x}, std::vector<double>{target_t.y},
+  plt::scatter(std::vector<double>{longitudinal_target.x}, std::vector<double>{longitudinal_target.y},
                60.0, {{"color", "magenta"}, {"label", "Longitudinal target"}});
   plt::scatter(std::vector<double>{st.x}, std::vector<double>{st.y},
                40.0, {{"color", "black"}, {"label", "Rear axle"}});

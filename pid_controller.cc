@@ -7,6 +7,7 @@ double PIDController::Control(double error, double dt) {
     return previous_output_;
   }
 
+  // 首帧不计算微分项，避免初值突变导致尖峰输出。
   double diff = 0.0;
   if (first_hit_) {
     first_hit_ = false;
@@ -41,7 +42,6 @@ void PIDController::Reset() {
   integral_ = 0.0;
   first_hit_ = true;
   integrator_saturation_status_ = 0;
-  output_saturation_status_ = 0;
 }
 
 void PIDController::Init(const PidConfig& pid_conf) {
@@ -54,9 +54,6 @@ void PIDController::Init(const PidConfig& pid_conf) {
   integrator_saturation_low_ = -std::fabs(pid_conf.integrator_saturation_level);
   integrator_saturation_status_ = 0;
   integrator_hold_ = false;
-  output_saturation_high_ = std::fabs(pid_conf.output_saturation_level);
-  output_saturation_low_ = -std::fabs(pid_conf.output_saturation_level);
-  output_saturation_status_ = 0;
   SetPID(pid_conf);
 }
 
