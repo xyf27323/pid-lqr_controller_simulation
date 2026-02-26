@@ -123,86 +123,140 @@ sim_demo/fast:
 	$(MAKE) -f CMakeFiles/sim_demo.dir/build.make CMakeFiles/sim_demo.dir/build
 .PHONY : sim_demo/fast
 
-common/math/linear_quadratic_regulator.o: common/math/linear_quadratic_regulator.cc.o
+lqr_controller.o: lqr_controller.cc.o
 
-.PHONY : common/math/linear_quadratic_regulator.o
-
-# target to build an object file
-common/math/linear_quadratic_regulator.cc.o:
-	$(MAKE) -f CMakeFiles/sim_demo.dir/build.make CMakeFiles/sim_demo.dir/common/math/linear_quadratic_regulator.cc.o
-.PHONY : common/math/linear_quadratic_regulator.cc.o
-
-common/math/linear_quadratic_regulator.i: common/math/linear_quadratic_regulator.cc.i
-
-.PHONY : common/math/linear_quadratic_regulator.i
-
-# target to preprocess a source file
-common/math/linear_quadratic_regulator.cc.i:
-	$(MAKE) -f CMakeFiles/sim_demo.dir/build.make CMakeFiles/sim_demo.dir/common/math/linear_quadratic_regulator.cc.i
-.PHONY : common/math/linear_quadratic_regulator.cc.i
-
-common/math/linear_quadratic_regulator.s: common/math/linear_quadratic_regulator.cc.s
-
-.PHONY : common/math/linear_quadratic_regulator.s
-
-# target to generate assembly for a file
-common/math/linear_quadratic_regulator.cc.s:
-	$(MAKE) -f CMakeFiles/sim_demo.dir/build.make CMakeFiles/sim_demo.dir/common/math/linear_quadratic_regulator.cc.s
-.PHONY : common/math/linear_quadratic_regulator.cc.s
-
-control/control/pid_controller.o: control/control/pid_controller.cc.o
-
-.PHONY : control/control/pid_controller.o
+.PHONY : lqr_controller.o
 
 # target to build an object file
-control/control/pid_controller.cc.o:
-	$(MAKE) -f CMakeFiles/sim_demo.dir/build.make CMakeFiles/sim_demo.dir/control/control/pid_controller.cc.o
-.PHONY : control/control/pid_controller.cc.o
+lqr_controller.cc.o:
+	$(MAKE) -f CMakeFiles/sim_demo.dir/build.make CMakeFiles/sim_demo.dir/lqr_controller.cc.o
+.PHONY : lqr_controller.cc.o
 
-control/control/pid_controller.i: control/control/pid_controller.cc.i
+lqr_controller.i: lqr_controller.cc.i
 
-.PHONY : control/control/pid_controller.i
+.PHONY : lqr_controller.i
 
 # target to preprocess a source file
-control/control/pid_controller.cc.i:
-	$(MAKE) -f CMakeFiles/sim_demo.dir/build.make CMakeFiles/sim_demo.dir/control/control/pid_controller.cc.i
-.PHONY : control/control/pid_controller.cc.i
+lqr_controller.cc.i:
+	$(MAKE) -f CMakeFiles/sim_demo.dir/build.make CMakeFiles/sim_demo.dir/lqr_controller.cc.i
+.PHONY : lqr_controller.cc.i
 
-control/control/pid_controller.s: control/control/pid_controller.cc.s
+lqr_controller.s: lqr_controller.cc.s
 
-.PHONY : control/control/pid_controller.s
+.PHONY : lqr_controller.s
 
 # target to generate assembly for a file
-control/control/pid_controller.cc.s:
-	$(MAKE) -f CMakeFiles/sim_demo.dir/build.make CMakeFiles/sim_demo.dir/control/control/pid_controller.cc.s
-.PHONY : control/control/pid_controller.cc.s
+lqr_controller.cc.s:
+	$(MAKE) -f CMakeFiles/sim_demo.dir/build.make CMakeFiles/sim_demo.dir/lqr_controller.cc.s
+.PHONY : lqr_controller.cc.s
 
-src/main.o: src/main.cpp.o
+main.o: main.cpp.o
 
-.PHONY : src/main.o
+.PHONY : main.o
 
 # target to build an object file
-src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/sim_demo.dir/build.make CMakeFiles/sim_demo.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
+main.cpp.o:
+	$(MAKE) -f CMakeFiles/sim_demo.dir/build.make CMakeFiles/sim_demo.dir/main.cpp.o
+.PHONY : main.cpp.o
 
-src/main.i: src/main.cpp.i
+main.i: main.cpp.i
 
-.PHONY : src/main.i
+.PHONY : main.i
 
 # target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/sim_demo.dir/build.make CMakeFiles/sim_demo.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
+main.cpp.i:
+	$(MAKE) -f CMakeFiles/sim_demo.dir/build.make CMakeFiles/sim_demo.dir/main.cpp.i
+.PHONY : main.cpp.i
 
-src/main.s: src/main.cpp.s
+main.s: main.cpp.s
 
-.PHONY : src/main.s
+.PHONY : main.s
 
 # target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/sim_demo.dir/build.make CMakeFiles/sim_demo.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
+main.cpp.s:
+	$(MAKE) -f CMakeFiles/sim_demo.dir/build.make CMakeFiles/sim_demo.dir/main.cpp.s
+.PHONY : main.cpp.s
+
+pid_controller.o: pid_controller.cc.o
+
+.PHONY : pid_controller.o
+
+# target to build an object file
+pid_controller.cc.o:
+	$(MAKE) -f CMakeFiles/sim_demo.dir/build.make CMakeFiles/sim_demo.dir/pid_controller.cc.o
+.PHONY : pid_controller.cc.o
+
+pid_controller.i: pid_controller.cc.i
+
+.PHONY : pid_controller.i
+
+# target to preprocess a source file
+pid_controller.cc.i:
+	$(MAKE) -f CMakeFiles/sim_demo.dir/build.make CMakeFiles/sim_demo.dir/pid_controller.cc.i
+.PHONY : pid_controller.cc.i
+
+pid_controller.s: pid_controller.cc.s
+
+.PHONY : pid_controller.s
+
+# target to generate assembly for a file
+pid_controller.cc.s:
+	$(MAKE) -f CMakeFiles/sim_demo.dir/build.make CMakeFiles/sim_demo.dir/pid_controller.cc.s
+.PHONY : pid_controller.cc.s
+
+trajectory.o: trajectory.cc.o
+
+.PHONY : trajectory.o
+
+# target to build an object file
+trajectory.cc.o:
+	$(MAKE) -f CMakeFiles/sim_demo.dir/build.make CMakeFiles/sim_demo.dir/trajectory.cc.o
+.PHONY : trajectory.cc.o
+
+trajectory.i: trajectory.cc.i
+
+.PHONY : trajectory.i
+
+# target to preprocess a source file
+trajectory.cc.i:
+	$(MAKE) -f CMakeFiles/sim_demo.dir/build.make CMakeFiles/sim_demo.dir/trajectory.cc.i
+.PHONY : trajectory.cc.i
+
+trajectory.s: trajectory.cc.s
+
+.PHONY : trajectory.s
+
+# target to generate assembly for a file
+trajectory.cc.s:
+	$(MAKE) -f CMakeFiles/sim_demo.dir/build.make CMakeFiles/sim_demo.dir/trajectory.cc.s
+.PHONY : trajectory.cc.s
+
+visualizer.o: visualizer.cc.o
+
+.PHONY : visualizer.o
+
+# target to build an object file
+visualizer.cc.o:
+	$(MAKE) -f CMakeFiles/sim_demo.dir/build.make CMakeFiles/sim_demo.dir/visualizer.cc.o
+.PHONY : visualizer.cc.o
+
+visualizer.i: visualizer.cc.i
+
+.PHONY : visualizer.i
+
+# target to preprocess a source file
+visualizer.cc.i:
+	$(MAKE) -f CMakeFiles/sim_demo.dir/build.make CMakeFiles/sim_demo.dir/visualizer.cc.i
+.PHONY : visualizer.cc.i
+
+visualizer.s: visualizer.cc.s
+
+.PHONY : visualizer.s
+
+# target to generate assembly for a file
+visualizer.cc.s:
+	$(MAKE) -f CMakeFiles/sim_demo.dir/build.make CMakeFiles/sim_demo.dir/visualizer.cc.s
+.PHONY : visualizer.cc.s
 
 # Help Target
 help:
@@ -213,15 +267,21 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... sim_demo"
-	@echo "... common/math/linear_quadratic_regulator.o"
-	@echo "... common/math/linear_quadratic_regulator.i"
-	@echo "... common/math/linear_quadratic_regulator.s"
-	@echo "... control/control/pid_controller.o"
-	@echo "... control/control/pid_controller.i"
-	@echo "... control/control/pid_controller.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
+	@echo "... lqr_controller.o"
+	@echo "... lqr_controller.i"
+	@echo "... lqr_controller.s"
+	@echo "... main.o"
+	@echo "... main.i"
+	@echo "... main.s"
+	@echo "... pid_controller.o"
+	@echo "... pid_controller.i"
+	@echo "... pid_controller.s"
+	@echo "... trajectory.o"
+	@echo "... trajectory.i"
+	@echo "... trajectory.s"
+	@echo "... visualizer.o"
+	@echo "... visualizer.i"
+	@echo "... visualizer.s"
 .PHONY : help
 
 

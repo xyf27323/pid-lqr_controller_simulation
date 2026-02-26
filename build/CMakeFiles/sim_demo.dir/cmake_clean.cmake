@@ -1,7 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/sim_demo.dir/common/math/linear_quadratic_regulator.cc.o"
-  "CMakeFiles/sim_demo.dir/control/control/pid_controller.cc.o"
-  "CMakeFiles/sim_demo.dir/src/main.cpp.o"
+  "CMakeFiles/sim_demo.dir/lqr_controller.cc.o"
+  "CMakeFiles/sim_demo.dir/main.cpp.o"
+  "CMakeFiles/sim_demo.dir/pid_controller.cc.o"
+  "CMakeFiles/sim_demo.dir/trajectory.cc.o"
+  "CMakeFiles/sim_demo.dir/visualizer.cc.o"
   "sim_demo"
   "sim_demo.pdb"
 )

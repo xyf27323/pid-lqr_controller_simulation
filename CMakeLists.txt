@@ -9,9 +9,11 @@ find_package(Python3 COMPONENTS Development REQUIRED)
 find_package(Eigen3 QUIET)
 
 add_executable(sim_demo
-  src/main.cpp
-  control/control/pid_controller.cc
-  common/math/linear_quadratic_regulator.cc
+  main.cpp
+  pid_controller.cc
+  trajectory.cc
+  lqr_controller.cc
+  visualizer.cc
 )
 
 target_include_directories(sim_demo PRIVATE

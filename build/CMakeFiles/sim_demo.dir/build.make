@@ -57,61 +57,91 @@ include CMakeFiles/sim_demo.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/sim_demo.dir/flags.make
 
-CMakeFiles/sim_demo.dir/src/main.cpp.o: CMakeFiles/sim_demo.dir/flags.make
-CMakeFiles/sim_demo.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yihang/TS/planning_controlling_simulation-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sim_demo.dir/src/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sim_demo.dir/src/main.cpp.o -c /home/yihang/TS/planning_controlling_simulation-main/src/main.cpp
+CMakeFiles/sim_demo.dir/main.cpp.o: CMakeFiles/sim_demo.dir/flags.make
+CMakeFiles/sim_demo.dir/main.cpp.o: ../main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yihang/TS/planning_controlling_simulation-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/sim_demo.dir/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sim_demo.dir/main.cpp.o -c /home/yihang/TS/planning_controlling_simulation-main/main.cpp
 
-CMakeFiles/sim_demo.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sim_demo.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yihang/TS/planning_controlling_simulation-main/src/main.cpp > CMakeFiles/sim_demo.dir/src/main.cpp.i
+CMakeFiles/sim_demo.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sim_demo.dir/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yihang/TS/planning_controlling_simulation-main/main.cpp > CMakeFiles/sim_demo.dir/main.cpp.i
 
-CMakeFiles/sim_demo.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sim_demo.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yihang/TS/planning_controlling_simulation-main/src/main.cpp -o CMakeFiles/sim_demo.dir/src/main.cpp.s
+CMakeFiles/sim_demo.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sim_demo.dir/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yihang/TS/planning_controlling_simulation-main/main.cpp -o CMakeFiles/sim_demo.dir/main.cpp.s
 
-CMakeFiles/sim_demo.dir/control/control/pid_controller.cc.o: CMakeFiles/sim_demo.dir/flags.make
-CMakeFiles/sim_demo.dir/control/control/pid_controller.cc.o: ../control/control/pid_controller.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yihang/TS/planning_controlling_simulation-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sim_demo.dir/control/control/pid_controller.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sim_demo.dir/control/control/pid_controller.cc.o -c /home/yihang/TS/planning_controlling_simulation-main/control/control/pid_controller.cc
+CMakeFiles/sim_demo.dir/pid_controller.cc.o: CMakeFiles/sim_demo.dir/flags.make
+CMakeFiles/sim_demo.dir/pid_controller.cc.o: ../pid_controller.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yihang/TS/planning_controlling_simulation-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/sim_demo.dir/pid_controller.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sim_demo.dir/pid_controller.cc.o -c /home/yihang/TS/planning_controlling_simulation-main/pid_controller.cc
 
-CMakeFiles/sim_demo.dir/control/control/pid_controller.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sim_demo.dir/control/control/pid_controller.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yihang/TS/planning_controlling_simulation-main/control/control/pid_controller.cc > CMakeFiles/sim_demo.dir/control/control/pid_controller.cc.i
+CMakeFiles/sim_demo.dir/pid_controller.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sim_demo.dir/pid_controller.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yihang/TS/planning_controlling_simulation-main/pid_controller.cc > CMakeFiles/sim_demo.dir/pid_controller.cc.i
 
-CMakeFiles/sim_demo.dir/control/control/pid_controller.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sim_demo.dir/control/control/pid_controller.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yihang/TS/planning_controlling_simulation-main/control/control/pid_controller.cc -o CMakeFiles/sim_demo.dir/control/control/pid_controller.cc.s
+CMakeFiles/sim_demo.dir/pid_controller.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sim_demo.dir/pid_controller.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yihang/TS/planning_controlling_simulation-main/pid_controller.cc -o CMakeFiles/sim_demo.dir/pid_controller.cc.s
 
-CMakeFiles/sim_demo.dir/common/math/linear_quadratic_regulator.cc.o: CMakeFiles/sim_demo.dir/flags.make
-CMakeFiles/sim_demo.dir/common/math/linear_quadratic_regulator.cc.o: ../common/math/linear_quadratic_regulator.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yihang/TS/planning_controlling_simulation-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/sim_demo.dir/common/math/linear_quadratic_regulator.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sim_demo.dir/common/math/linear_quadratic_regulator.cc.o -c /home/yihang/TS/planning_controlling_simulation-main/common/math/linear_quadratic_regulator.cc
+CMakeFiles/sim_demo.dir/trajectory.cc.o: CMakeFiles/sim_demo.dir/flags.make
+CMakeFiles/sim_demo.dir/trajectory.cc.o: ../trajectory.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yihang/TS/planning_controlling_simulation-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/sim_demo.dir/trajectory.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sim_demo.dir/trajectory.cc.o -c /home/yihang/TS/planning_controlling_simulation-main/trajectory.cc
 
-CMakeFiles/sim_demo.dir/common/math/linear_quadratic_regulator.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sim_demo.dir/common/math/linear_quadratic_regulator.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yihang/TS/planning_controlling_simulation-main/common/math/linear_quadratic_regulator.cc > CMakeFiles/sim_demo.dir/common/math/linear_quadratic_regulator.cc.i
+CMakeFiles/sim_demo.dir/trajectory.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sim_demo.dir/trajectory.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yihang/TS/planning_controlling_simulation-main/trajectory.cc > CMakeFiles/sim_demo.dir/trajectory.cc.i
 
-CMakeFiles/sim_demo.dir/common/math/linear_quadratic_regulator.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sim_demo.dir/common/math/linear_quadratic_regulator.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yihang/TS/planning_controlling_simulation-main/common/math/linear_quadratic_regulator.cc -o CMakeFiles/sim_demo.dir/common/math/linear_quadratic_regulator.cc.s
+CMakeFiles/sim_demo.dir/trajectory.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sim_demo.dir/trajectory.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yihang/TS/planning_controlling_simulation-main/trajectory.cc -o CMakeFiles/sim_demo.dir/trajectory.cc.s
+
+CMakeFiles/sim_demo.dir/lqr_controller.cc.o: CMakeFiles/sim_demo.dir/flags.make
+CMakeFiles/sim_demo.dir/lqr_controller.cc.o: ../lqr_controller.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yihang/TS/planning_controlling_simulation-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/sim_demo.dir/lqr_controller.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sim_demo.dir/lqr_controller.cc.o -c /home/yihang/TS/planning_controlling_simulation-main/lqr_controller.cc
+
+CMakeFiles/sim_demo.dir/lqr_controller.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sim_demo.dir/lqr_controller.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yihang/TS/planning_controlling_simulation-main/lqr_controller.cc > CMakeFiles/sim_demo.dir/lqr_controller.cc.i
+
+CMakeFiles/sim_demo.dir/lqr_controller.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sim_demo.dir/lqr_controller.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yihang/TS/planning_controlling_simulation-main/lqr_controller.cc -o CMakeFiles/sim_demo.dir/lqr_controller.cc.s
+
+CMakeFiles/sim_demo.dir/visualizer.cc.o: CMakeFiles/sim_demo.dir/flags.make
+CMakeFiles/sim_demo.dir/visualizer.cc.o: ../visualizer.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/yihang/TS/planning_controlling_simulation-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/sim_demo.dir/visualizer.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/sim_demo.dir/visualizer.cc.o -c /home/yihang/TS/planning_controlling_simulation-main/visualizer.cc
+
+CMakeFiles/sim_demo.dir/visualizer.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/sim_demo.dir/visualizer.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/yihang/TS/planning_controlling_simulation-main/visualizer.cc > CMakeFiles/sim_demo.dir/visualizer.cc.i
+
+CMakeFiles/sim_demo.dir/visualizer.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/sim_demo.dir/visualizer.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/yihang/TS/planning_controlling_simulation-main/visualizer.cc -o CMakeFiles/sim_demo.dir/visualizer.cc.s
 
 # Object files for target sim_demo
 sim_demo_OBJECTS = \
-"CMakeFiles/sim_demo.dir/src/main.cpp.o" \
-"CMakeFiles/sim_demo.dir/control/control/pid_controller.cc.o" \
-"CMakeFiles/sim_demo.dir/common/math/linear_quadratic_regulator.cc.o"
+"CMakeFiles/sim_demo.dir/main.cpp.o" \
+"CMakeFiles/sim_demo.dir/pid_controller.cc.o" \
+"CMakeFiles/sim_demo.dir/trajectory.cc.o" \
+"CMakeFiles/sim_demo.dir/lqr_controller.cc.o" \
+"CMakeFiles/sim_demo.dir/visualizer.cc.o"
 
 # External object files for target sim_demo
 sim_demo_EXTERNAL_OBJECTS =
 
-sim_demo: CMakeFiles/sim_demo.dir/src/main.cpp.o
-sim_demo: CMakeFiles/sim_demo.dir/control/control/pid_controller.cc.o
-sim_demo: CMakeFiles/sim_demo.dir/common/math/linear_quadratic_regulator.cc.o
+sim_demo: CMakeFiles/sim_demo.dir/main.cpp.o
+sim_demo: CMakeFiles/sim_demo.dir/pid_controller.cc.o
+sim_demo: CMakeFiles/sim_demo.dir/trajectory.cc.o
+sim_demo: CMakeFiles/sim_demo.dir/lqr_controller.cc.o
+sim_demo: CMakeFiles/sim_demo.dir/visualizer.cc.o
 sim_demo: CMakeFiles/sim_demo.dir/build.make
 sim_demo: /usr/lib/x86_64-linux-gnu/libpython3.8.so
 sim_demo: CMakeFiles/sim_demo.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yihang/TS/planning_controlling_simulation-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable sim_demo"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/yihang/TS/planning_controlling_simulation-main/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable sim_demo"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/sim_demo.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
